@@ -10,6 +10,14 @@ class UserInformation extends Model
     public $timestamps = true;
     protected $primaryKey = 'id';
 
+
+    public static function getid(){
+        try{
+            $data = self::get('id')->count();
+            return $data;
+        }catch(\Exception $e){
+            logError('获取用户信息错误',[$e->getMessage()]);
+
     /**
      * 查找
      * @param $query
@@ -30,6 +38,16 @@ class UserInformation extends Model
             return null;
         }
     }
+
+
+    public static function zhucenum($time2){
+        try{
+            $data = self::where('created_at','>=',$time2)
+                ->select('id')
+                ->count();
+            return $data;
+        }catch(\Exception $e){
+            logError('获取用户信息错误',[$e->getMessage()]);
 
     /**
      * 增加用户
@@ -105,3 +123,4 @@ class UserInformation extends Model
         }
     }
 }
+
