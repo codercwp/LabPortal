@@ -13,6 +13,7 @@ use Illuminate\Http\Request;
 |
 */
 
+/*from dujingwen*/
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
@@ -22,7 +23,7 @@ Route::prefix('auth')->namespace('Auth')->group(function () {
     Route::post('refresh', 'AuthController@refresh'); //刷新token
     Route::post('register', 'AuthController@registered'); //刷新token
 });
-
+/*from dujingwen*/
 Route::prefix('/admin')->namespace('Admin')->group(function(){
     Route::get('/showregister','WebController@showregister');
     Route::get('/showarticle','WebController@showarticle');
@@ -32,7 +33,7 @@ Route::prefix('/admin')->namespace('Admin')->group(function(){
     Route::get('/comment','WebController@comment');
     Route::get('/signsum','WebController@signsum');
 });
-
+/*from dujingwen*/
 Route::prefix('/admin/pagecontent')->namespace('Admin\PageContent')->group(function(){
     Route::get('/noticesum','NoticeController@NoticeSum');
     Route::get('/noticestatus','NoticeController@NoticeStatus');
