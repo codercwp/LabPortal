@@ -33,6 +33,7 @@ class UserInformation extends Model
         }catch(\Exception $e){
             logError('获取用户信息错误',[$e->getMessage()]);
 
+
     /**
      * 查找
      * @param $query
@@ -53,7 +54,6 @@ class UserInformation extends Model
             return null;
         }
     }
-
 
     public static function zhucenum($time2){
         try{

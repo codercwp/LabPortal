@@ -63,7 +63,7 @@ class Content extends Model
             return $data;
         } catch (\Exception $e) {
             logError('获取失败', [$e->getMessage()]);
-
+          
     protected $fillable = ['title','priority','neirong','p_url'];
     protected $guarded = [];
 
@@ -146,7 +146,6 @@ class Content extends Model
             return null;
         }
     }
-
 
     //返回实验新闻/实验室公告/聚焦实验室内容
     public static function getNew($class_id)

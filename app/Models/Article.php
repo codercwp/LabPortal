@@ -11,7 +11,6 @@ class Article extends Model
     protected $primaryKey = 'article_id';
 
     /**
-
      * @return |null
      * 查询文章总量
      */
@@ -70,8 +69,6 @@ class Article extends Model
         }
     }
 
-
-
     /**
      * @param $bianhao3
      * @return |null
@@ -100,7 +97,6 @@ class Article extends Model
             return $data;
         }catch(\Exception $e){
             logError('查看文章错误',[$e->getMessage()]);
-
             return null;
         }
     }

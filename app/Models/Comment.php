@@ -11,7 +11,6 @@ class Comment extends Model
     public $timestamps = true;
     protected $primaryKey = 'comment_id';
 
-
     public static function bianhao(){
         try{
             $data = self::select('article_id')
@@ -47,7 +46,6 @@ class Comment extends Model
             // return array_unique($res);
         } catch(\Exception $e){
             logError('查询评论失败！',null,'error',[$e->getMessage()]);
-
             return null;
         }
     }
@@ -64,7 +62,6 @@ class Comment extends Model
             return $data;
         }catch(\Exception $e){
             logError('获取用户信息错误',[$e->getMessage()]);
-
      * 评论管理页面删除评论
      * @author ChenMiao <github.com/Yidaaa-u>
      * @param String $comment_id

@@ -38,7 +38,6 @@ class ApplicationSetting extends Model
         }
     }
 
-
     /**
      * 状态
      * @param $id
