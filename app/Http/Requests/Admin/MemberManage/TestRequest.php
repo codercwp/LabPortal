@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Requests\Admin\PageContent;
+namespace App\Http\Requests\Admin;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class friendDelete extends FormRequest
+class TestRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -13,7 +13,7 @@ class friendDelete extends FormRequest
      */
     public function authorize()
     {
-        return true;
+        return false;
     }
 
     /**
@@ -24,11 +24,7 @@ class friendDelete extends FormRequest
     public function rules()
     {
         return [
-            'link_id'=>'request|integer',
+            //
         ];
-    }
-    protected function failedValidation(Validator $validator)
-    {
-        throw (new HttpResponseException(json_fail('参数错误!',$validator->errors()->all(),100)));
     }
 }
