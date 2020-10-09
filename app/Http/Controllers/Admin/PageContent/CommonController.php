@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 
 /**
- * 这里面没用，但我不想删
+ * 这个里面没用，但我不想删
  * caiwenpin
  */
 class CommonController extends Controller
